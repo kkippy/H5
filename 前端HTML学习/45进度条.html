@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* * {
+            max-width: 0;
+            padding: 0;
+            box-sizing: border-box;
+        } */
+        /* 构建一个盒子，设值边框，内边距，进行圆角化处理 */
+        .ba {
+            width: 100px;
+            height: 10px;
+            border: 1px solid red;
+            border-radius: 5px;
+
+        }
+
+        /* 设置子盒子的宽慰父盒子的一半，高度不变，背景红色，做过渡处理 */
+        .bar {
+            width: 50%;
+            height: 100%;
+            background-color: red;
+            transition: all .5s;
+        }
+
+        /* 鼠标经过实现动画 */
+        .ba:hover .bar {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ba">
+        <div class="bar"></div>
+    </div>
+</body>
+
+</html>

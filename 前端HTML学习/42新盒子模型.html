@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 大小是内边距与边框之和，会撑大盒子 */
+        div {
+            width: 200px;
+            height: 100px;
+            background-color: gray;
+            border: 17px solid pink;
+            padding: 5px;
+            box-sizing: content-box;
+        }
+
+        /* 新盒子模型border-box */
+        p {
+            display: block;
+            width: 200px;
+            height: 100px;
+            background-color: gray;
+            border: 17px solid pink;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <p></p>
+</body>
+
+</html>

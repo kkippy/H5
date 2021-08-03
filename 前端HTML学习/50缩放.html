@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            margin: 200px auto;
+            background-color: red;
+            transform-origin: left bottom;
+        }
+
+        div:hover {
+            /* 里面是数字，没有单位，是倍数的意思 用逗号连接*/
+            /* transform: scale(2, 1); */
+            /* 等比例缩放写一个参数就可以 */
+            /* 参数小于1为缩放 */
+            /* 不会影响其他盒子的位置 */
+            transform: scale(0.5);
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            overflow: hidden;
+            font-size: 20px;
+            width: 0;
+            margin: 0 auto;
+            line-height: 24px;
+            height: 24px;
+            /* 文字强制一行内显示 */
+            white-space: nowrap;
+            background-color: skyblue;
+            /* steps为分几步完成动画，无需写ease 或 linear */
+            animation: move 2s steps(7) forwards;
+        }
+
+        @keyframes move {
+            0% {
+                width: 0;
+            }
+
+            100% {
+                width: 140px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>洪宇是个小日眼</div>
+</body>
+
+</html>

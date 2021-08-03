@@ -1,0 +1,220 @@
+.main {
+    margin-top: 10px;
+    width: 980px;
+    height: 456px;
+    margin-left: 220px;
+} 
+.newsflash {
+    float: right;
+    width: 250px;
+    height: 456px;
+}
+.focus {
+    float: left;
+    width: 721px;
+    height: 455px;
+}
+.news {
+    height: 165px;
+    padding-left: 14px;
+    border: 1px solid #e4e4e4;
+}
+.news-hd {
+    line-height: 33px;
+    height: 33px;
+    border-bottom: 1px dotted #e4e4e4;
+    padding: 0 15px;
+}
+.news-hd i {
+    float: left;
+    font-size: 14px;
+}
+.news-hd .more {
+    float: right;
+}
+.news-hd .more::after {
+    font-family: 'icomoon';
+    content: '\ea42';
+}
+.news-bd ul li {
+    margin-top: 6px;
+    font-size: 12px;
+}
+.bargain{
+    margin-top: 5px;
+    width: 250px;
+    height: 75px;
+}
+.bargain img {
+    width: 100%;
+}
+.lifeservice {
+     height: 210px;
+     border: 1px solid #e4e4e4;
+     border-top: 0;
+     overflow: hidden;
+ }
+.lifeservice ul {
+     width: 252px;
+ }
+.lifeservice ul li  {
+     float: left;
+     border-right: 1px solid #e4e4e4;
+     border-bottom: 1px solid #e4e4e4;
+     width: 63px;
+     height: 70px;
+     text-align: center;
+ }
+ .lifeservice ul li i {
+     display:inline-block;
+     width: 28px;
+     height: 26px;
+     margin-top: 12px;
+ }
+ .lifeservice ul li .pic1 {
+    background: url(../images/icons.png) no-repeat -17px -15px;
+ }
+ .lifeservice ul li .pic2 {
+    background: url(../images/icons.png) no-repeat -78px -15px;
+ }
+ .lifeservice ul li .pic3 {
+    background: url(../images/icons.png) no-repeat -140px -15px;
+ }
+ .lifeservice ul li .pic4 {
+    background: url(../images/icons.png) no-repeat -205px -15px;
+ }
+ .lifeservice ul li .pic5 {
+    background: url(../images/icons.png) no-repeat -17px -88px;
+ }
+ .lifeservice ul li .pic6 {
+    background: url(../images/icons.png) no-repeat -78px -88px;
+ }
+ .lifeservice ul li .pic7 {
+    background: url(../images/icons.png) no-repeat -140px -88px;
+ }
+ .lifeservice ul li .pic8 {
+    background: url(../images/icons.png) no-repeat -205px -88px;
+ }
+ .lifeservice ul li .pic9 {
+    background: url(../images/icons.png) no-repeat -17px -159px;
+ }
+ .lifeservice ul li .pic10 {
+    background: url(../images/icons.png) no-repeat -78px -159px;
+ }
+ .lifeservice ul li .pic11 {
+    background: url(../images/icons.png) no-repeat -140px -159px;
+ }
+ .lifeservice ul li .pic12 {
+    background: url(../images/icons.png) no-repeat -205px -159px;
+ }
+ /* 推荐模块 */
+ .recom {
+     width: 1200px;
+     height: 163px;
+     margin-top: 10px;
+ }
+.recom-hd {
+     float: left;
+     width: 206px;
+     height: 163px;
+     line-height: 163px;
+     text-align: center;
+     background-color: #5c5251;
+ }
+.recom-bd {
+     float: left;
+ }
+.recom-bd ul li {
+     position: relative;
+     float: left;
+     width: 248px;
+     height: 163px;
+     background-color: #ebebeb;
+     padding: 20px 30px 25px 18px;
+ }
+.recom-bd ul li:nth-child(-n+3) {
+    border-right: 1px solid #dddddd;
+ }
+.recom-bd ul li h5 {
+     font-size: 16px;
+     font-weight: 700;
+ }
+.recom-bd ul li p {
+     width: 73px;
+     height: 18px;
+     display: inline-block;
+     padding: 0 3px;
+     margin-top: 10px;
+     background-color: #00a0e8;
+     color: #fff;
+ }
+.recom-bd ul li img {
+     position: absolute;
+    top: 24px;
+    right: 33px;
+ }
+ /* 家电楼层 */
+ .floor .w {
+     margin-top: 30px;
+ }
+ .box_hd {
+     height: 30px;
+     border-bottom: 2px solid #c81623;
+ }
+ .box_hd h3 {
+     float: left;
+     font-size: 18px;
+     color: #c81623;
+     font-weight: 400;
+     margin-bottom: 7px;
+ }
+ .tab_list {
+     float: right;
+     line-height: 30px;
+ }
+ .tab_list ul li {
+     float: left;
+ }
+ .tab_list li a {
+     padding: 0 13px;
+     margin:0 8px;
+     font-size: 12px;
+ }
+ .floor .w {
+     margin-top: 30px;
+ }
+ .box_bd {
+     height: 361px;
+
+ }
+ .tab_list_item>div {
+     float: left;
+    height: 361px;
+ }
+ .col-329 {
+     width: 329px;
+ } 
+ .col-210 {
+     margin-left: -72px;
+     width: 210px;
+     background-color: #f9f9f9;
+ }
+ .col-210 ul {
+     padding-left: 12px;
+ }
+.col-210 ul li {
+    float: left;
+    width: 85px;
+    height: 34px;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    line-height: 33px;
+    margin-right: 10px;
+}
+ .col-221 {
+     width: 221px;
+     border-right: 1px solid #ccc;
+ }
+ .col-219 {
+     width: 219px;
+ }
