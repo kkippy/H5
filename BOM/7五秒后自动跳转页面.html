@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>点击</button>
+    <div></div>
+</body>
+<script>
+    var btn = document.querySelector('button');
+    var div = document.querySelector('div');
+    btn.addEventListener('click', function () {
+        location.href = 'http.www.baibu.com';
+    })
+    var nice = 5;//设置时间
+    var time = setInterval(function () {
+        if (nice == 0) {
+            location.href = 'http.www.baibu.com';
+
+        } else {
+            div.innerHTML = '你将在' + nice + '秒后返回主页面';
+            nice--;
+        }
+    }, 1000);
+</script>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div></div>
+    <p>123
+        <span>456</span>
+    </p>
+
+
+    <script>
+        //两者可获取标签里面的内容
+
+        //innertext不识别HTML标签，为改变元素内容 会去除html标签，同时空格和换行也会去掉
+        var div = document.querySelector('div');
+        div.innerText = '<strong> 今天是 </strong>';
+        // innerHTML 识别HTML标签 使用最多 保留空格和换行
+        div.innerHTML = '<strong> 今天是 </strong>';
+
+        var p = document.querySelector('p');
+        console.log(p.innerText);
+        console.log(p.innerHTML);
+    </script>
+</body>
+
+</html>

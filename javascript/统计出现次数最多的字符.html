@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //利用chartAt 遍历字符串
+        //每个字符都贮存给对象，若该元素没有该属性，则为1，有则加一
+        var str = 'sidufjbipufjbiufuii';//统计每个元素出现的次数
+        var o = [];
+        for (var i = 0; i < str.length; i++) {
+            var chars = str.charAt(i);//字符串中的每一个字符
+            if (o[chars]) {//判断字符有没有这个属性，即有没有重复 
+                o[chars]++;
+            }
+            else {
+                o[chars] = 1;
+            }
+        }
+        console.log(o);
+
+        // 遍历对象用for in
+        var max = 0;
+        var num = '';
+        for (var k in o) {
+            //k得到的是属性名
+            //o[k]得到的是属性值
+            if (o[k] > max) {
+                max = o[k];
+                num = k;
+            }
+        }
+        console.log(max);
+        console.log('最多的字符是：' + num);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            color: white;
+        }
+
+        .change {
+            background-color: black;
+            width: 300px;
+            height: 300px;
+            color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="change"> asihc</div>
+    <!-- //行内样式操作 element.style 适合样式较少，功能简单的情况
+    //类名样式操作 element.className 适合样式较多，功能复杂的情况
+    //会直接更改元素类名，覆盖原先的类名
+    //若想保留原先的类名，则this.className = '原先类名 更改的类名如change'
+    //将发生变化的样式写道一个类中，再通过element.className来调用效果 -->
+    <script>
+        //获取元素
+        var div = document.querySelector('div');
+        //注册事件 处理程序
+        div.onclick = function () {
+            //改变背景颜色
+            var flag = 0;
+            if (flag == 0) {
+                this.style.backgroundColor = 'pink';//注意命名方式是驼峰命名法
+                flag = 1;
+            }
+            else {
+                this.style.backgroundColor = 'blue';
+                flag = 0;
+            }
+        }
+
+        //类名样式操作 element.className
+        //获取元素
+        var cg = document.querySelector('div')
+        //注册事件 处理程序
+        cg.onclick = function () {
+            cg.className = 'change';
+        }
+
+    </script>
+</body>
+
+</html>

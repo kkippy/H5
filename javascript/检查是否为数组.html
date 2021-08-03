@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //instanceof 来检测
+        var str = {};
+        console.log(str instanceof Array);//false
+        var arr = [];
+        console.log(arr instanceof Array);//true
+
+        //翻转数组
+        function reserve(arr1) {
+            if (arr1 instanceof Array) {
+                var arr2 = [];
+                for (var i = arr1.length - 1; i >= 0; i--) {
+                    arr2[arr2.length] = arr1[i];
+                }
+                return arr2;
+            }
+            else {
+                return '格式错误';
+            }
+        }
+        console.log(reserve(1, 2, 3));//格式错误
+        console.log(reserve([1, 2, 3]));//321
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            position: relative;
+            margin: 120px auto;
+
+            width: 400px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .box input {
+            border: 0;
+            outline: none;
+            height: 30px;
+            width: 320px;
+        }
+
+        .box img {
+            position: absolute;
+            top: 8px;
+            right: 1px;
+            width: 30px;
+        }
+    </style>
+</head>
+//先写html，再写css,最后js
+
+<body>
+    <div class="box">
+        <label for="">
+            <img src="images/龙.png" alt="">
+        </label>
+        <input type="password">
+
+        <!-- <button></button> -->
+    </div>
+
+    <script>
+        //获取元素
+        // var box  = document.querySelector('box');
+        var input = document.querySelector('input');
+        var img = document.querySelector('img');
+        //注册事件 处理程序
+        var flag = 0;
+        img.onclick = function () {
+            //点击一次后，flag 要有变化
+            if (flag == 0) {
+                input.type = 'text';
+                img.src = 'images/B20130829周星宇.jpg';
+                flag = 1;
+            }
+            else {
+                input.type = 'password';
+                img.src = 'images/龙.png';
+                flag = 0;
+
+            }
+        }
+    </script>
+</body>
+
+</html>

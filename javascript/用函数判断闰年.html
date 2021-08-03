@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // function year(str) {
+        //     // var arr = prompt()
+        //     if (str % 400 == 0) {
+        //         return str + '是闰年'
+        //     }
+        //     else {
+        //         return str + '是平年'
+        //     }
+        // }
+        // var re = year(2001);
+        // console.log(re);
+
+        //输出年份的二月份天数
+        function back() {
+            var str = prompt('请输入年份：');
+            if (year(str)) {
+                alert('今年是闰年2月有29天');
+            }
+            else {
+                alert('今年是平年2月有28天');
+            }
+        }
+        back();
+
+
+        function year(str) {
+            var num = false;
+            if (str % 400 == 0 || str % 4 == 0 && str % 100 != 0) {
+                num = true;
+            }
+            return num;
+        }
+        year();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

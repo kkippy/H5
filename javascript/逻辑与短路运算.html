@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 逻辑与的短路运算，表达式1为真，则返回表达式2,表达式1为假，则返回表达式1
+        console.log(123 && 456);//456
+        console.log(0 && 456);//0
+        // 空或否定为假，其余为真，0 '' null undefined NaN 为假
+
+        // 逻辑或的短路运算，表达式1为真，输出表达式1，表达式1为假，输出表达式2
+        console.log(123 || 456);//123
+        console.log(0 || 456);//456
+        var num = 0;
+        console.log(123 || num++);
+        console.log(num);//输出的是123，因为num没有参加运算，依然是0
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

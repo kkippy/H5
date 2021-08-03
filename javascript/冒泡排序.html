@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //可用sort方法
+        var nice = [1, 52, 48, 654, 48, 14, 89];
+        nice.sort(function (a, b) {//sort的完整写法，避免只针对个位数起作用的问题
+            // return a - b;//升序
+            return b - a;//降序
+
+        });
+        console.log(nice);
+
+
+        var arr = [5, 4, 3, 2, 1];
+        for (var i = 0; i <= arr.length; i++) {//外部循环管趟数，5个数据走4趟
+            for (var j = 0; j <= arr.length - i - 1; j++) {
+                //前一个数与后面一值进行比较
+                if (arr[j] > arr[j + 1]) {
+                    var temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
+        console.log(arr);
+
+        //用函数的方法对冒泡进行封装
+        function sort(arr) {
+            for (var i = 0; i <= arr.length - 1; i++) {
+                for (var j = 0; j <= arr.length - i - 1; j++) {
+                    if (arr[j] > arr[j + 1]) {
+                        var temp = arr[j];
+                        arr[j] = arr[j + 1];
+                        arr[j + 1] = temp;
+                    }
+                }
+            }
+            return arr;
+        }
+        var re = sort([1, 246, 4587, 4545, 703]);
+        console.log(re);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

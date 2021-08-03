@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            border: 1px solid #ccc;
+            width: 200px;
+            height: 30px;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <input type="text" value="邮箱/ID">
+
+    </div>
+
+    <script>
+        var input = document.querySelector('input');
+        input.onfocus = function () {
+            if (this.value === '邮箱/ID') {
+                this.value = '';
+            }
+            this.style.color = '#333';
+        }
+        input.onblur = function () {
+            if (this.value === '') {
+                this.value = '邮箱/ID';
+                this.style.border = '1px solid pink';
+            }
+            this.style.color = '#666';
+            // this.style.border = '1px solid #ccc';
+        }
+    </script>
+</body>
+
+</html>

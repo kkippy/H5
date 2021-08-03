@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>123</li>
+    </ul>
+</body>
+<script>
+    //创建节点 document.creatElement('tageName')
+    //添加节点 node.appendChild(child)  node为父级 child为子级 在后面追加子元素
+    var li = document.createElement('li');
+    var ul = document.querySelector('ul');
+    ul.appendChild(li);
+
+    //node.insetBefore(child,指定元素)  在前面插入
+    var nice = document.createElement('li');
+    ul.insertBefore(nice, ul.children[0]);
+
+    //删除节点 node.removeChild(child) //node 是父级
+    // href:javascript:; 阻止连接跳转
+</script>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box">
+        <span class="erweima"></span>
+        <ul>
+            <li>wertyu</li>
+            <li>123</li>
+            <li>345</li>
+            <li>阿萨v</li>
+            <li>7867</li>
+        </ul>
+    </div>
+    <script>
+        //元素节点的节点值为1，属性为2，文本为3
+        //父级节点node.parentNode 得到最近的父级节点 找不到父节点则返回空
+        var erweima = document.querySelector('.erweima');
+        console.log(erweima.parentNode);
+
+        //子节点 parentNode。childNodes 包含元素节点，文本节点等等，所以输出有11个
+        var ul = document.querySelector('ul');
+        console.log(ul.childNodes);
+        //children 获得所有的子元素节点 提倡使用此方法
+        console.log(ul.children);
+
+        //返回第1个子元素节点 使用firstElementChild 最后个用lastElementChild 但存在兼容性问题
+        console.log(ul.firstElementChild);
+        //实际开发的写法 children[i] 通过数组索引号的形式实现返回第n个子元素节点的效果
+        console.log(ul.children[0]);
+        console.log(ul.children[ul.children.length - 1]);//最后一个子元素节点的灵活获取
+
+        //兄弟节点 node.nextSibling 获得下一个兄弟元素节点 包含元素节点，文本节点等等，找不到则返回null
+        // node.previousSibling 获得上一个兄弟元素节点
+        //node.nextElementSibling 返回下一个兄弟元素节点
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>eu</button>
+</body>
+<script>
+    // location.assign（） 可以跳转页面 记录浏览历史
+    var btn = document.querySelector('button');
+    btn.addEventListener('click', function () {
+        // location.assign('https://www.miguvideo.com');
+        // location.replace 不记录浏览历史，不能后退
+        location.replace('https://www.miguvideo.com');
+        // location.reload 重新加载
+
+    })
+
+    //history.forword history.back 页面前进和后退功能  go(参数) 若1则前进1页面，-1则后退一页面
+
+</script>
+
+</html>

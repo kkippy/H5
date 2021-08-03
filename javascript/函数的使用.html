@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //创建函数
+        //只有函数才有argument是，且是内置的
+        function getSum() {
+            var sum = 0;
+            for (var i = 1; i <= 100; i++) {
+                sum += i;
+            }
+            console.log(sum);
+        }
+        //调用函数
+        getSum();
+        //函数的参数
+        function cook(str) {//str为形参，类似于变量值
+            console.log(str);
+        }
+        cook('鱼香肉丝');//将肉丝赋值给str
+        cook('红烧茄子');
+
+        //求和
+        function getSums(start, end) {
+            var sum = 0;
+            for (var i = start; i <= end; i++) {
+                sum += i;
+            }
+            console.log(sum);
+        }
+        getSums(1, 1000);
+
+        //形参与实参个数不符
+        function getSum(num1, num2) {
+
+            console.log(num1 + num2);
+        }
+        getSum(1, 1000, 254);//个数不符时，取形参的个数，1001
+        getSum(1);//形参小于实参，undefinded,结果为NaN
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

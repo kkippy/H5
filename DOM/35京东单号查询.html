@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            position: relative;
+            margin: 100px;
+            width: 210px;
+        }
+
+        .con {
+            display: none;
+            position: absolute;
+            width: 200px;
+            font-size: large;
+            top: -38px;
+            left: -21px;
+            border: 1px solid red;
+            height: 30px;
+            color: #333;
+        }
+
+        .con::before {
+            content: '';
+            position: absolute;
+            top: 31px;
+            left: 31px;
+            width: 0;
+            height: 0;
+            line-height: 0;
+            font-size: 0;
+            border: 5px solid red;
+            border-color: red transparent transparent;
+            border-style: solid dashed dashed;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="con"></div>
+        <input type="text" placeholder="请输入快递单号" class="jd">
+    </div>
+</body>
+<script>
+    var con = document.querySelector('.con');
+    var input = document.querySelector('input');
+    //使用keyup的原因
+    //keydown keypress在按下时才会触发，此时文本还没有输入到文本框中，造成输入2个，大盒子输出1个的情况
+    //键盘松开时字符才会进入到搜索栏中，
+    input.addEventListener('keyup', function () {
+        con.innerHTML = this.value;//将搜索栏中的内容传递给大盒子
+        if (this.value == '') {//搜索栏中为空，则隐藏大盒子
+            con.style.display = 'none';
+        } else {
+            con.style.display = 'block';
+        }
+    })
+    // 失去焦点隐藏盒子
+    input.addEventListener('blur', function () {
+        con.style.display = 'none';
+    })
+    // 得到焦点且内容不为空显示盒子
+    input.addEventListener('focus', function () {
+        if (this.value != '') {
+            con.style.display = 'block';
+        }
+    })
+
+</script>
+
+</html>

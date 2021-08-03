@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            width: 200px;
+            height: 200px;
+            background-color: #333;
+        }
+
+        .son {
+            width: 100px;
+            height: 100px;
+            background-color: #999;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+</body>
+<script>
+    var father = document.querySelector('.father');
+    var son = document.querySelector('.son');
+    //mouseover经过父盒子会触发事件，父盒子中的子盒子也会输出11触发事件
+    // father.addEventListener('mouseover', function () {
+    //     console.log(11);
+    // })
+    // mouseoenter只会在父盒子中触发，子盒子不会触发事件
+    father.addEventListener('mouseenter', function () {
+        console.log(11);
+    })
+</script>
+
+</html>

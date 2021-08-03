@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    data-开头的都是自定义属性
+    <div data-index="time"></div>
+    或用js设置
+    element.setAttribute('data-time',2)
+    <script>
+        var div = document.querySelector('div');
+        div.setAttribute('data-time', 2);
+        // console.log(div.gets);
+
+        //新增获取属性值的方法（兼容性差）
+        //dataset只能获取data-开头的，如有data-list-name,则div.dataset.listName(使用驼峰命名法)
+        console.log(div.dataset.index);
+    </script>
+</body>
+
+</html>

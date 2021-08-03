@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <Script>
+        // fn1();//可以调用函数
+        // function fn1() {
+
+        // }
+        // fn1();//不可以调用函数
+        // var 负你 = function () {
+
+        // }
+        //案例
+        f1();
+        console.log(c);//9
+        console.log(b);//9
+        console.log(a);//undefined,因为只在函数中声明了，是局部变量，而非全局变量
+        function f1() {
+            var a = b = c = 9;//相当于var a = 9; b = 9;c = 9而非var a = 9,b = 9, c = 9,所以b = c = 9是全局变量，应为在函数中没有赋值
+            console.log(a);//9
+            console.log(b);//9
+            console.log(c);//9
+        }
+    </Script>
+</head>
+
+<body>
+
+</body>
+
+</html>

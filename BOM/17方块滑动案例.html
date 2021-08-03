@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .slider {
+            position: relative;
+            margin: 50px 300px;
+            width: 180px;
+            top: 30px;
+            left: 1206px;
+        }
+
+        .slider span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            background-color: pink;
+            overflow: hidden;
+            z-index: 22;
+        }
+
+        .con {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 30px;
+            width: 150px;
+            line-height: 30px;
+            text-align: center;
+            background-color: skyblue;
+        }
+    </style>
+    <script src="animate.js"></script>
+</head>
+
+<body>
+    <div class="slider">
+        <span>$$$</span>
+        <div class="con">问题反馈</div>
+    </div>
+</body>
+<script>
+    var slider = document.querySelector('.slider');
+    var con = document.querySelector('.con');
+    var span = document.querySelector('span');
+    slider.addEventListener('mouseenter', function () {
+        animate(con, -150, function () {//移动完毕之后内容改变
+            span.innerHTML = '###';
+        });
+
+    })
+    slider.addEventListener('mouseleave', function () {
+        animate(con, 0, function () {//移动完毕之后内容恢复
+            span.innerHTML = '$$$';
+        });
+
+    })
+</script>
+
+</html>

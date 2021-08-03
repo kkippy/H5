@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1.窗口加载事件 window.onload = function (){}  window.addEventListener('load',function(){})
+        //可以写在body的前面
+        //window.onload 传统注册方式只能写一次，如有多个则以最后一个为准
+        //若使用addlinstener则么有限制
+        // window.onload = function () {
+        //     var btn = document.querySelector('button')
+        //     btn.onclick = function () {
+        //         alert('666');
+        //     }
+        // }
+        window.addEventListener('load', function () {//load要等待页面元素全部加载完毕后才执行
+            var btn = document.querySelector('button')
+            btn.onclick = function () {
+                alert('666');
+            }
+        })
+        //document.addeventlistener('DOMContentLoaded',function (){})
+        document.addEventListener('DOMContentLoaded', function () {//DOMContentLoaded是在dom加载完毕后就执行，速度更快，用户体验更好
+            alert(11);
+        })
+
+        // 2.调整窗口大小事件
+        // window.onresize = function () {}  window.addEventListener('resize',function () {})
+        window.addEventListener('resize', function () {
+            console.log(window.innerWidth);//屏幕宽度
+            console.log(22);
+        })
+    </script>
+    <button> 123</button>
+</body>
+
+</html>

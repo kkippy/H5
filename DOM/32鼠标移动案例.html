@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            position: relative;
+        }
+
+        div img {
+            position: absolute;
+            width: 90px;
+            height: 90px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img src="images/B20130828李洪宇.jpg" alt="">
+    </div>
+</body>
+<script>
+    var img = document.querySelector('img');
+    document.addEventListener('mousemove', function (e) {
+        var x = e.pageX;
+        var y = e.pageY;
+        img.style.left = x - 45 + 'px';//一定要加单位
+        img.style.top = y - 45 + 'px';//让图片居中在鼠标上
+    })
+</script>
+
+</html>

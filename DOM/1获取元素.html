@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="time">2020-12-23</div>
+    <ul>
+        <li>'afiu'</li>
+        <li>'dvbaeru'</li>
+        <li>'fiubsip'</li>
+        <li>'fiubsip'</li>
+        <li>'fiubsip'</li>
+        <li>'fiubsip'</li>
+    </ul>
+
+    <ol id="ol">
+        <li>山东</li>
+        <li>山东</li>
+        <li>山东</li>
+        <li>山东</li>
+    </ol>
+
+    <div class="box">盒子</div>
+    <div class="box">资源</div>
+    <script>
+        //使用getElementById获取
+        //注意大小写getElementById
+        //返回的是元素对象
+        ///script写到标签的下面
+        var timer = document.getElementById('time');
+        console.dir(timer);//更好的查看元素中的属性和方法
+
+        //通过标签名获取
+        // getElementsByTagName('标签名称')
+        var nice = document.getElementsByTagName('li');
+        console.log(nice);
+        console.log(nice[0]);
+
+        //选取父元素下的所有子元素  用element.getElementsByTagName('子元素标签名');
+        var out = document.getElementById('ol');
+        console.log(out.getElementsByTagName('li'));
+
+        // document.getElementsByClassName通过类名来获取元素
+        var box = document.getElementsByClassName('box');
+        console.log(box);
+
+        // querySelector('选择器')//返回指定选择器的第一个元素对象
+        //选择器需要加符号，类用. id用#
+        // querySelectorAll('选择器')可以选取多个元素
+        var firstbox = document.querySelector('.box');//box类用.
+        console.log(firstbox);
+        var allboxs = document.querySelectorAll('.box');
+        console.log(allboxs);
+
+        //获取特殊元素，body 
+        var qwe = document.body;
+        console.log(qwe);
+        //html
+        var asd = document.documentElement;
+        console.log(asd);
+    </script>
+</body>
+
+</html>

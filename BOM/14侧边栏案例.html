@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .w {
+            width: 1000px;
+            margin-bottom: 10px;
+            /* margin: 0 auto; */
+        }
+
+        div {
+            position: relative;
+        }
+
+        .slider {
+            position: absolute;
+            top: 190px;
+            left: 1000px;
+            height: 140px;
+            width: 50px;
+            background-color: pink;
+        }
+
+        span {
+            /* display: none; */
+            position: absolute;
+        }
+
+        .head {
+            height: 150px;
+            background-color: #333;
+        }
+
+        .banner {
+            height: 350px;
+            background-color: blue;
+        }
+
+        .main {
+            height: 900px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    页面被卷曲的头部可以用window.pageYoffset
+    <div class="slider">
+        <span class="goback">返回顶部</span>
+    </div>
+    <div class="head w">头部区域</div>
+    <div class="banner w">banner区域</div>
+    <div class="main w">主体区域</div>
+</body>
+<script>
+    var slider = document.querySelector('.slider');
+    var banner = document.querySelector('.banner');
+    var main = document.querySelector('.main');
+    var goback = document.querySelector('.goback');
+    var maintop = main.offsetTop;
+    var bannerheight = banner.offsetTop;
+    var toped = slider.offsetTop - bannerheight;
+    document.addEventListener('scroll', function () {
+        // console.log(window.pageYOffset);
+        //当scroll大于200时侧边栏固定
+        if (window.pageYOffset >= bannerheight) {
+            slider.style.position = 'fixed';
+            slider.style.top = toped + 'px';
+        }
+        else {
+            slider.style.position = 'absolute';
+            slider.style.top = '190px';
+
+        }
+        if (window.pageYOffset >= maintop) {
+            goback.style.display = 'block';
+        }
+        else {
+            goback.style.display = 'none';
+        }
+    })
+</script>
+
+</html>

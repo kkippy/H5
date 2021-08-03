@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    //Onkeyup 某个按键松开时触发
+    // document.onkeyup = function () {
+    //     alert('起飞');
+    // }
+    // document.addEventListener('keyup', function () {
+    //     alert('起飞');
+    // })
+
+    //onkeydown  某个按键按下时触发
+    // document.onkeydown = function () {
+    //     alert('吧唧');
+    // }
+    document.addEventListener('keydown', function (e) {
+        // alert('落下');
+        console.log(e.keyCode);//e.keyCode返回ACII值
+    })
+
+    //onkeypress 某个按键按下时触发 但不识别功能键如ctrl
+
+    //执行顺序 down-->press-->up
+
+    // keyup keydown 不区分字母大小写，大小写返回的ACII值相同
+    // keypress 区分字母大小写，大小写返回的ACII值相同
+    document.addEventListener('keypress', function (e) {
+        console.log(e.keyCode);  //A是65，a是97
+    })
+</script>
+
+</html>

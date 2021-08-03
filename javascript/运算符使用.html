@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log(3 >= 5);
+        console.log(2 <= 4);
+        // ==会将字符串型转化为数字型在进行比较（会转性）
+        console.log(1 == 1);
+        console.log(18 == '18');
+        // 不等于为！= 完全等于是===，数值宇数据类型一摸一样
+        console.log(18 === '18'); //false
+
+        // 逻辑运算符
+        // &&为和，||为或，！为非
+        // &&一假则假，||一真则真 
+        var num = 5;
+        var str = "索尼大法好"
+        console.log(num > 6 && str.length >= num); //false
+        console.log(num <= 4 || str.length >= num); //true
+        // console.log(num > 6 && str.length >= num);
+
+        // 赋值运算符
+        // num++为自加1，num+=2是自加2，即每次加2
+        var num = 10;
+        num += 2;
+        console.log(num);//12
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

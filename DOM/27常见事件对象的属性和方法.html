@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>123</div>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+<script>
+    var div = document.querySelector('div');
+    //e.target可以获得点击的对象
+    // e.target返回的是触发事件的对象，this返回的是绑定事件的对象
+    div.addEventListener('click', function (e) {
+        console.log(e.target);
+        console.log(this);
+    });
+    var ul = document.querySelector('ul');
+    ul.addEventListener('click', function (e) {
+        console.log(e.target);//因为是点击li后才触发效果，故输出li
+        console.log(this);//因为绑定的是Ul,故输出ul
+    });
+</script>
+
+</html>

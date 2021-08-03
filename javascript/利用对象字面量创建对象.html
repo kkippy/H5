@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //用对象字面量创建对象
+        var obj = {//多个属性用逗号隔开
+            name: '李洪宇',
+            age: 21,
+            sex: '男',
+            height: 180,
+            sayhi: function () {//方法冒号后面跟匿名函数
+                console.log('hi');
+            }
+        }
+        //使用对象
+        //调用对象属性，对象名.属性名
+        console.log(obj.name);
+        //方法2 对象名【'属性名'】
+        console.log(obj['sex']);
+        //调用对象中的方法
+        //对象名.方法名（）
+        obj.sayhi();
+
+        //利用 new Object 创建对象
+        //用等号赋值，分号隔开，类似于Java
+        var obj = new Object();
+        obj.name = '是丢v给';
+        obj.sex = 156;
+        obj.age = 186;
+        console.log(obj.name);
+        console.log(obj['sex']);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

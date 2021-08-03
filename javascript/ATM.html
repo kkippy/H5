@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var str = prompt('请输入想要的操作：1.存钱 2.取钱 3.显示余额 4.退出');
+        str = parseInt(str);
+        switch (str) {
+            case 1:
+                var sum = 100;
+                var num = prompt('请输入存入金额');
+                num = parseFloat(num);
+                sum += num;
+                alert('您的总额为' + sum);
+                break;
+            case 2:
+                var sum1 = 100;
+                var num1 = prompt('请输入取出金额');
+                num1 = parseFloat(num1);
+                sum1 -= num1;
+                alert('现在的金额为：' + sum1);
+                break;
+            case 3:
+                alert('您的余额为' + sum1);
+                break;
+            case 4:
+                alert('您正在退出');
+                break;
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

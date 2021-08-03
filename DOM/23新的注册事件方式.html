@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>ertyu</button>
+    <button>852</button>
+</body>
+<script>
+    // eventTarget.addEventlistener(type,listener[,useCapture]);
+    // type事件类型字符串  listener事件处理函数
+    var btns = document.querySelectorAll('button');
+    btns[1].addEventListener('click', function () {//必须加引号，不带on，应为是字符串类型
+        alert(22);
+    })
+    btns[1].addEventListener('click', function () {//对同一个事件，同一元素可添加多个function（侦听器）   
+        alert(33);
+    })
+</script>
+
+</html>

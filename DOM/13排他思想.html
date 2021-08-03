@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+1，所有元素清除样式
+2.再设置目标元素的各种样式效果
+
+<body>
+    <button>按钮1</button>
+    <button>按钮2</button>
+    <button>按钮3</button>
+    <button>按钮4</button>
+    <button>按钮5</button>
+</body>
+<script>
+    var btns = document.getElementsByTagName('button');
+    for (var i = 0; i < btns.length; i++) {//将所有的按钮元素收集起来得到伪数组
+        btns[i].onclick = function () {//所有按钮的注册事件
+            for (var i = 0; i < btns.length; i++) {
+                //把所有按钮的背景颜色去掉
+                btns[i].style.backgroundColor = '';
+            }
+            this.style.backgroundColor = 'pink';//然后再修改颜色
+        }
+    }
+</script>
+
+</html>

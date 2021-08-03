@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="giao">小阿giao</button>
+    <button id="ry">小日眼</button> <br>
+    <img src="images/B20130829周星宇.jpg" alt="" title="小阿giao">
+
+    <script>
+        //获取事件源
+        var giao = document.getElementById('giao');
+        var ry = document.getElementById('ry');
+        var img = document.querySelector('img');
+        //注册事件。处理程序
+        giao.onclick = function () {
+            img.src = 'images/B20130829周星宇.jpg';
+            img.title = '小阿giao'
+        }
+        //修改元素属性值；元素.属性 = '';
+        ry.onclick = function () {
+            img.src = 'images/B20130828李洪宇.jpg';
+            img.title = '小日眼'
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //function 函数名（）{
+        // return 需要返回的结果
+        // }
+        // 函数名（）
+
+        function num(num1, num2) {
+            return num1 + num2;
+        }
+        console.log(num(1, 2));
+
+        //求两数的最大值
+        function compare(num1, num2) {
+            // if (num1 > num2) {
+            //     return num1;
+            // }
+            // else {
+            //     return num2;
+            // }
+            return num1 > num2 ? num1 : num2;//三元表达式，同效果
+        }
+        console.log(compare(20, 649));
+
+        //求数组中的最大值
+        function maxarr(arr) {
+            var max = arr[0];
+            for (var i = 1; i < arr.length; i++) {
+                if (arr[i] > max) {
+                    max = arr[i];
+                }
+            }
+            return max;
+        }
+        var re = maxarr([2, 51, 34, 31, 215, 346, 4894]);//将数组赋值给arr形参
+        console.log(re);
+
+        //注意事项
+        // return后的语句将不再执行
+        //return只能返回一个值
+        function fe(num1, num2) {
+            return num1, num2;
+        }
+        console.log(fe(1, 2));
+        //想要获取多个数值，用数组的形式表达出来
+        //若函数没有return，则返回undefined
+        function fe1(num1, num2) {
+        }
+        console.log(fe1(1, 2));//输出undefined
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 作用域；代码、变量在某个范围内其效果，提高程序可靠性和减少命名冲突
+        //全局作用域：整个script标签，或一个js文件中
+        var num = 10;//全局变量
+        //在函数内部没有申明的变量也是全局变量
+        //局部作用域：在一个函数里的，代码名只在函数内部起效果
+        function num() {//局部作用域
+            var arr = [1, 2, 3, 4];//局部变量
+        }
+
+        //局部变量：在局部作用域下面的变量
+        //函数的形参也可以看作局部变量
+
+        //局部变量比较节约资源
+        // 全局变量只有浏览器关闭的时候才会销毁，比较占内存
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

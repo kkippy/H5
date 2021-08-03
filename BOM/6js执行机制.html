@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    先执行执行栈中的同步任务，如遇到异步任务就将其放入任务队列中，同步任务执行完再执行任务队列中的异步任务
+    <script>
+        console.log(1);
+        document.addEventListener('click', function () {
+            console.log(2);
+        })
+        setInterval(function () {
+            console.log(3);
+        }, 1000)
+        //输出132
+    </script>
+</body>
+
+</html>

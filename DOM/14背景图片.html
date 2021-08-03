@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background: url(images/sky1.jpg) no-repeat;
+        }
+
+        .box {
+            margin: 30px auto;
+            width: 410px;
+            height: 100px;
+            background-color: #ccc;
+        }
+
+        .box li {
+            float: left;
+            margin: 0 1px;
+            cursor: pointer;
+        }
+
+        .box img {
+            width: 100px;
+            height: 100px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="box">
+        <li> <img src="images/sky1.jpg" alt=""></li>
+        <li> <img src="images/sky2.jpeg" alt=""></li>
+        <li> <img src="images/sky3.jpg" alt=""></li>
+        <li> <img src="images/sky4.jpg" alt=""></li>
+    </ul>
+</body>
+
+<script>
+    var imgs = document.querySelector('.box').querySelectorAll('img');//选取box中的所有img元素,类名要加.
+    //循环注册事件
+    for (var i = 0; i < imgs.length; i++) {
+        imgs[i].onclick = function () {
+            //this.src获取图片路径
+            document.body.style.backgroundImage = 'url(' + this.src + ")"//通过拼接字符串来实现图片的路径获取
+            // imgs[i].style.weight = '100%';
+        }
+    }
+</script>
+
+</html>

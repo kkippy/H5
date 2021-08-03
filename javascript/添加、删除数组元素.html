@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //.push()方法，在末尾增加一个或多个数组元素
+        var arr = [1, 2, 3];
+        arr.push(4);
+        console.log(arr);
+        console.log(arr.push(4, 6));//输出数组的长度 5
+
+
+        //unnshife,在前面增加一个或多个数组元素，原数组的长度会发生变化
+        arr.unshift(9, 8)
+        console.log(arr);
+        console.log(arr.unshift(4, 6));
+
+        //pop可以删除数组的最后一个元素
+        arr.pop();
+        console.log(arr)//输出1，2，3
+        console.log(arr.pop());//返回最后一个元素
+        console.log(arr)//输出1，2
+
+        //shift可以删除数组的第一个一个元素
+        console.log(arr.shift());//返回删除的第一个元素
+        console.log(arr)//输出2，3
+        console.log(arr.length);//输出2
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

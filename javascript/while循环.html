@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var num = 1;//初始化变量
+        while (num <= 100) {//条件表达式
+            console.log('halloworld');//操作表达式
+            num++;//计数器更新，防止死循环
+        }
+
+        var year = 1;
+        while (year <= 100) {
+            console.log('这个人' + year + '岁了');
+            year++;
+        }
+        var sum = 0;
+        var num = 1;
+        while (num <= 100) {
+            sum += num;
+            num++;
+        }
+        console.log(sum);
+
+        var str = prompt('请输入密码：');
+        while (str != 'hallo') {
+            str = prompt('请输入密码：');
+        }
+        alert('正确');
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

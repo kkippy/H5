@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //退出本次循环，继续执行剩余次数的循环
+        for (var i = 1; i <= 4; i++) {
+            if (i == 3) {
+                continue;//填出第三次执行结果，直接跳转到i++
+            }//代码效果：第1，2，4个包子
+            console.log('第' + i + '个包子');
+        }
+        //除了被7整除之外的整数和
+        var sum = 0;
+        for (var i = 1; i <= 100; i++) {
+            if (i % 7 == 0) {
+                continue;
+            }
+            sum += i;
+        }
+        console.log(sum);
+
+        var sum = 0;
+        for (var i = 1; i <= 100; i++) {
+            if (i % 10 == 3) {
+                continue;
+            }
+            sum += i;
+        }
+        console.log(sum);
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

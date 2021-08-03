@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .tab {
+            width: 500px;
+            margin: 0 auto;
+        }
+
+        .tab-list {
+            float: left;
+            width: 416px;
+            height: 40px;
+            background-color: #666;
+        }
+
+        .tab-list li {
+            float: left;
+            padding: 0 20px;
+            color: #fff;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        .tab-list .current {
+            background-color: red;
+            color: #fff;
+        }
+
+        .tab-con {
+            float: left;
+
+        }
+
+        .item {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tab">
+        <div class="tab-list">
+            <ul>
+                <li class="current">商品介绍</li>
+                <li>规格包装</li>
+                <li>售后保障</li>
+                <li>商品评价</li>
+
+        </div>
+        <div class="tab-con">
+            <!-- 显示商品介绍模块 -->
+            <div class="item" style="display: block">商品介绍模块</div>
+            <div class="item">规格包装模块</div>
+            <div class="item">售后保障模块</div>
+            <div class="item">商品评价模块</div>
+        </div>
+    </div>
+    </div>
+</body>
+
+<script>
+    //tab栏使用排他思想
+    var tablist = document.querySelector('.tab-list');
+    var lis = tablist.querySelectorAll('li');
+    var items = document.querySelectorAll('.item');//要加.
+    //注册事件 处理程序
+    for (var i = 0; i < lis.length; i++) {
+        //给li设置索引号
+        lis[i].setAttribute('index', i);
+        lis[i].onclick = function () {
+            //清除所有的li的class
+            for (var i = 0; i < lis.length; i++) {
+                lis[i].className = '';
+            }
+            //留下自己
+            this.className = 'current';
+            //显示内容模块
+            var index = this.getAttribute('index');//获取自定义属性index的值
+            console.log(index);
+            // 上面的list与下面的显示内容的编号成一一对应关系
+            for (var i = 0; i < items.length; i++) {
+                items[i].style.display = 'none';
+            }
+            //留下自己
+            items[index].style.display = 'block';
+        }
+    }
+</script>
+
+</html>

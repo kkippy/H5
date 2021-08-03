@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 双重for循环的结构
+        //         for (外层初始化变量；外层的条件表达式；外部造作表达式) {
+        // for (内层初始化变量；内层条件表达式；内层操作表达式)
+        //         }
+        // var line = prompt('请输入要打印的星星行数：');
+        // var rank = prompt('请输入要打印的星星列数：');
+        // var str = '';
+        // for (var i = 1; i <= line; i++) {//负责打印5行
+        //     for (var j = 1; j <= rank; j++) {//负责打印一行的5个星星
+        //         str = str + '*';
+        //     }
+        //     str = str + '\n';//负责换行，即打满5个星就换一行
+        // }
+
+        // 倒三角形
+        // var line = prompt('请输入要打印的星星行数：');
+        // var rank = prompt('请输入要打印的星星列数：');
+        // var str = '';//核心算法：var j = rank; j >= i; j--;
+        // for (var i = 1; i <= line; i++) {//负责打印i行
+        //     for (var j = rank; j >= i; j--) {//负责打印一行的j个星星,并逐次递减
+        //         str = str + '*';
+        //     }
+        //     str = str + '\n';//负责换行，即打满5个星就换一行
+        // }
+        // alert(str);
+
+        //九九乘法表
+        var num = '';
+        for (var i = 1; i <= 9; i++) {
+            for (var j = 1; j <= i; j++) {//核心：j<=i
+                num += j + '*' + i + '=' + i * j + ' ';
+            }
+            num = num + '\n';
+        }
+        alert(num)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

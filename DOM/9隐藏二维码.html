@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .pic {
+            position: relative;
+            margin: 100px auto;
+            width: 200px;
+            height: 150px;
+            width: 150px;
+            height: 150px;
+            border: 1px solid #ccc;
+        }
+
+        .pic img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .button {
+            position: absolute;
+            top: 0;
+            right: 150px;
+            width: 14px;
+            height: 14px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 核心：display：none 隐藏元素，block 显示元素 -->
+    <div class="pic">
+        <img src="images/龙.png" alt="">
+        <i class="button">*</i>
+    </div>
+
+    <script>
+        //获取元素
+        var btn = document.querySelector('.button');//类名必须加. id用#
+        var pic = document.querySelector('.pic');//大盒子的样式改变
+        //注册事件 处理程序
+        btn.onclick = function () {
+            pic.style.display = 'none';//点击*后隐藏图片
+        }
+    </script>
+</body>
+
+</html>

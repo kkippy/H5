@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //数组的创建
+        var arr = [1, 2, 3];//123为数组元素
+        console.log(arr[2]);//索引数组元素格式：数组名【索引号】索引号从0开始
+
+        //遍历数组，把每个元素都提取出来，用循环
+        //数组长度：数组名.length，动态变化
+        var arr1 = ['ying', 'yang', 'shui', 'huo']
+        for (var i = 0; i < arr1.length; i++) { //可以用使用长度的方式减少操作量
+            console.log(arr1[i]);
+        }
+        // 求和及平均值
+        var arr = [2, 3, 9, 7, 5];
+        var sum = 0;
+        var average = 0;
+        for (var i = 0; i < arr.length; i++) {
+            sum += arr[i];
+        }
+        average = sum / arr.length;
+        console.log(sum);
+        console.log(averaget);
+
+        //求数组中的最大值
+        var arr = [2, 24, 84, 54, 439];
+        var max = arr[0];
+        for (var i = 1; i < arr.length; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+        }
+
+        //数组转换成字符串
+        var str = '';
+        var arr = ['ying', 'yang', 'shui', 'huo'];
+        for (var i = 0; i < arr.length; i++) {
+            str += arr[i] + '|';
+        }
+        console.log(str);
+
+        //添加数组元素
+        // 1.增加数组的长度
+        var arr1 = ['ying', 'yang', 'shui', 'huo'];
+        arr.length = 5;
+        console.log(arr1);//有6个数组元素。最后；两个为空
+
+        //2.修改索引号（最常用）
+        //不要直接给数组名赋值，否则元素会直接成为赋值
+        var arr2 = ['ying', 'yang', 'shui', 'huo'];
+        arr2[4] = 'jin';//序号不一样则添加
+        arr2[2] = 'mu';//序号一样则替代
+        console.log(arr2);
+
+        var arr3 = [];
+        for (var i = 0; i < 10; i++) {
+            arr3[i] = i + 1;
+        }
+
+        console.log(arr3);
+
+        //筛选数组
+        var arr = [20, 5, 9, 47, 23, 2, 4, 32];
+        var arr1 = [];
+        // var j = 0;
+        for (var i = 0; i < arr.length; i++) {//遍历数组
+            if (arr[i] > 10) {//{arr[i]是一个数
+                // arr1.push(arr[i]);
+                // arr1[j] = arr[i];//从第一个元素开始存
+                // arr1[arr1.length] = arr[i];//arr.length开始就是为0
+                arr1.push(arr[i]);
+                // j++;
+            }
+        }
+        console.log(arr1);
+
+        //删除指定的元素
+        var arr = [20, 0, 9, 0, 23, 0, 4, 0];
+        var arr1 = [];
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i] != 0) {
+                arr1[arr1.length] = arr[i];
+            }
+        }
+        console.log(arr1);
+
+        //反向遍历数组
+        var arr2 = ['ying', 'yang', 'shui', 'huo'];
+        var newarr = [];
+        for (var i = arr2.length - 1; i >= 0; i--) {
+            newarr[newarr.length] = arr2[i];
+        }
+        console.log(newarr);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

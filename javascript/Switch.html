@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // csae为选项 switch为转换，开关
+        // switch (num > 10 ) {
+        //     case value1:
+        //     执行语句1;
+        //     break;
+        //     case value2:
+        //     执行语句2;
+        //     break;
+        //    ...
+        //     default:
+        //     执行最后的语句
+
+        // }
+        // 一般表达式写变量,num 与 case 中的值匹配时是全等的关系，即值与数据类型完全一致,若无break，则会一直运行
+        var num = '1';
+        switch (num) {
+            case '1':
+                console.log(1);
+                break;
+            case 2:
+                console.log(2);
+                break;
+            case 3:
+                console.log(3);
+                break;
+            default:
+                console.log('???');
+        }
+
+        var fruit = prompt('请输入水果名称；');
+        switch (fruit) {
+            case '苹果':
+                alert('3.5一斤');
+                break;
+            case '梨':
+                alert('2.5一斤');
+                break;
+            case '西瓜':
+                alert('4元一斤');
+                break;
+            default:
+                alert('没有此水果');
+
+            // if 与 switch 的区别
+            // 当分支较少时，if效率更高，分支较多时switch的效率更高，switch在于精度的判断，if是范围的判断
+
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="nice" index="123"></div>
+</body>
+获取自定义属性值
+获取属性值 element.属性 只能获取元素自带属性
+第二种方法element.getAttribute('属性') 可以获取自定义属性
+<script>
+    var div = document.querySelector('div');
+    // console.log(div.id);
+    console.log(div.getAttribute('index'));
+    console.log(div.getAttribute('id'));
+
+    //设置元素属性值
+    // 1.重新赋值
+    div.id = 'gong';
+    console.log(div.id);
+    // 2.element.setAttribute('属性','值')
+    div.setAttribute('index', 456);
+
+    //移除元素属性值
+    // 2.element.removeAttribute('属性')
+
+
+</script>);
+
+</html>

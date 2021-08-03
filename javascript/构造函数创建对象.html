@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //构造函数就是把对象中相似的方法与属性抽象出来封装到函数里面
+        //  function 构建函数名（） {
+        //      this.属性 = 值；
+        //      this.方法 = function（）{}
+        //  }
+        //  new 构造函数名();
+
+        //构造函数的首字母要大写
+        //构造函数不需要return
+        function Star(name, age, sex, height) {
+            this.name = name;
+            this.age = age;
+            this.sex = sex;
+            this.height = height;
+            this.sing = function (song) {
+                console.log(song);
+            }
+        }
+        var str = new Star('duifvgh', 16, 'man', 186);
+        console.log(str.name);
+        console.log(str.age);
+        str.sing('wangqingshui');
+//调用构造函数必须使用new
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
